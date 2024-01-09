@@ -1,0 +1,96 @@
+body {
+  background-color: #f1eff1;
+}
+
+.container {
+  background-image: linear-gradient(135deg, #669bfe 0%, #befdc0 100%);
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  font-family: "Poppins", sans-serif;
+  margin: 60px;
+  max-width: 600px;
+}
+.page-opening {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font-weight: 600;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 18px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.search-bar {
+  width: 430px;
+  font-size: 22px;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  margin-left: -125px;
+  margin-top: 30px;
+}
+
+.search-button {
+  font-size: 22px;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 55px;
+  margin-top: 30px;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background: rebeccapurple;
+}
+
+.weekly-forecast {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 70%;
+}
+
+.current-weather-info {
+  margin-left: 30px;
+}
+
+.week-day {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+
+.temp-high {
+  color: #f0f0f0;
+  opacity: 0.8;
+}
+
+.temp-low {
+  color: #f0f0f0;
+  opacity: 0.5;
+}
+
+footer {
+  color: #f0f0f0;
+  text-align: center;
+  padding-bottom: 8px;
+}
