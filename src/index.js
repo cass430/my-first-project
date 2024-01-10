@@ -1,5 +1,5 @@
 function displayTemp(Response) {
-  console.log(Response.data);
+  console.log(Response.data.wind);
 
   //select the temperature element then display the temperature element //
   let numaricalTempElement = document.querySelector("#numarical-temp-value");
@@ -14,12 +14,12 @@ function displayTemp(Response) {
   feelsLikeElement.innerHTML = `Feels like: ${feelsLikeNumber}°C`;
   //
 
-  let humidityElement = querySelector.document("#current-humidity");
+  let humidityElement = document.querySelector("#current-humidity");
   let humidityNumber = Response.data.temperature.humidity;
   humidityElement.innerHTML = `Humidity: ${humidityNumber}%`;
 
-  let windSpeedElement = querySelector.document("#current-wind");
-  windSpeedElement.innerHTML = `Wind: ${Response.data.wind.speed}`;
+  let windSpeedElement = document.querySelector("#current-wind");
+  windSpeedElement.innerHTML = `Wind: ${Response.data.wind.speed}km/h`;
 }
 
 function handleSubmit(event) {
