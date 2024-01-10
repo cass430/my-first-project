@@ -13,7 +13,15 @@ function displayTemp(Response) {
   let feelsLikeNumber = Math.round(Response.data.temperature.feels_like);
   feelsLikeElement.innerHTML = `Feels like: ${feelsLikeNumber}°C`;
   //
+
+  let humidityElement = querySelector.document("#current-humidity");
+  let humidityNumber = Response.data.temperature.humidity;
+  humidityElement.innerHTML = `Humidity: ${humidityNumber}%`;
+
+  let windSpeedElement = querySelector.document("#current-wind");
+  windSpeedElement.innerHTML = `Wind: ${Response.data.wind.speed}`;
 }
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -25,6 +33,7 @@ function handleSubmit(event) {
 
   axios.get(apiUrl).then(displayTemp);
 }
+
 let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", handleSubmit);
