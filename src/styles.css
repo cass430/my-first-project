@@ -81,18 +81,20 @@ h4 {
 
 .week-day {
   padding-top: 25px;
-  padding-bottom: 15px;
+  padding-bottom: 22px;
   font-weight: 600;
 }
 
 .temp-high {
   color: #f0f0f0;
   opacity: 0.8;
+  padding-bottom: 20px;
 }
 
 .temp-low {
   color: #f0f0f0;
   opacity: 0.5;
+  padding-bottom: 25px;
 }
 
 footer {
