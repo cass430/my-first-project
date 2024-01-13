@@ -73,28 +73,25 @@ h4 {
   margin-left: 30px;
 }
 
-.current-wind-speed {
-  font-size: 14px;
-
-  padding-bottom: 10px;
-}
-
 .week-day {
   padding-top: 25px;
-  padding-bottom: 22px;
+  padding-bottom: 15px;
   font-weight: 600;
 }
 
 .temp-high {
   color: #f0f0f0;
   opacity: 0.8;
-  padding-bottom: 20px;
 }
 
 .temp-low {
   color: #f0f0f0;
   opacity: 0.5;
-  padding-bottom: 25px;
+}
+
+.windy {
+  font-size: 14px;
+  padding-bottom: 8px;
 }
 
 footer {

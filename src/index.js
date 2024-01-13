@@ -1,5 +1,5 @@
 function displayTemp(Response) {
-  console.log(Response.data.wind);
+  console.log(Response.data);
 
   //select the temperature element then display the temperature element //
   let numaricalTempElement = document.querySelector("#numarical-temp-value");
@@ -21,7 +21,6 @@ function displayTemp(Response) {
   let windSpeedElement = document.querySelector("#current-wind");
   windSpeedElement.innerHTML = `Wind: ${Response.data.wind.speed}km/h`;
 }
-
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -33,7 +32,6 @@ function handleSubmit(event) {
 
   axios.get(apiUrl).then(displayTemp);
 }
-
 let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", handleSubmit);
@@ -58,3 +56,23 @@ if (hours < 10) {
 }
 
 curentDate.innerHTML = `<strong> ${formattedDay}</strong> ${hours}:${minutes}`;
+
+function displayForecast() {
+  let forecastHtml = "<div class='row'>";
+  let days = ["MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  days.forEach(function (day) {
+    forecastHtml += `<div class="col ${day}">
+   ☀️<br> 
+   <div class="week-day"> ${day}</div> 
+    <div class="temp-high"> 21</div> 
+    <div class="temp-low"> 11</div>
+  </div>`;
+  });
+
+  forecastHtml = forecastHtml + "</div>";
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
