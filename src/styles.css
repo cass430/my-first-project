@@ -43,11 +43,10 @@ h4 {
 }
 
 .search-bar {
-  width: 200%;
+  width: 194%;
   font-size: 22px;
-  border-radius: 5px 0px 0px 5px;
-  border: none;
-  margin-left: -125px;
+  border-radius: 5px;
+  margin-left: -135px;
   margin-top: 30px;
 }
 
@@ -57,18 +56,17 @@ h4 {
   border-radius: 5px;
   margin-left: 55px;
   margin-top: 30px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .search-button:hover {
   background-color: #669bfe;
   color: #f0f0f0;
-  animation: 0.4s ease-in-out;
-  border: none;
-  cursor: pointer;
 }
 
 .current-date-heading {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .current-weather-info strong {
@@ -109,6 +107,7 @@ h4 {
 }
 
 footer {
+  font-size: 14px;
   color: #f0f0f0;
   text-align: center;
   padding-top: 8px;
