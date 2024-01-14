@@ -93,5 +93,4 @@ function displayForecast(Response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-
-getForecast(Paris);
+getForecast();
