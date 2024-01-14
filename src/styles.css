@@ -26,7 +26,8 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
   padding-left: 15px;
   padding-top: 25px;
   padding-bottom: 18px;
@@ -42,7 +43,7 @@ h4 {
 }
 
 .search-bar {
-  width: 430px;
+  width: 200%;
   font-size: 22px;
   border-radius: 5px 0px 0px 5px;
   border: none;
@@ -66,6 +67,14 @@ h4 {
   cursor: pointer;
 }
 
+.current-date-heading {
+  font-weight: 500;
+}
+
+.current-weather-info strong {
+  color: #236ecc;
+}
+
 .weekly-forecast {
   display: flex;
   justify-content: space-between;
@@ -79,14 +88,15 @@ h4 {
 }
 
 .week-day {
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-weight: 600;
 }
 
 .temp-high {
   color: #f0f0f0;
   opacity: 0.8;
+  padding-bottom: 15px;
 }
 
 .temp-low {

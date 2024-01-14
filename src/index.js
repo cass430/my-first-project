@@ -11,15 +11,15 @@ function displayTemp(Response) {
   //feels-like element practice //
   let feelsLikeElement = document.querySelector("#feels-like");
   let feelsLikeNumber = Math.round(Response.data.temperature.feels_like);
-  feelsLikeElement.innerHTML = `Feels like: ${feelsLikeNumber}°C`;
+  feelsLikeElement.innerHTML = `Feels like: <strong>${feelsLikeNumber}°C </strong>`;
   //
 
   let humidityElement = document.querySelector("#current-humidity");
   let humidityNumber = Response.data.temperature.humidity;
-  humidityElement.innerHTML = `Humidity: ${humidityNumber}%`;
+  humidityElement.innerHTML = `Humidity: <strong>${humidityNumber}%</strong>`;
 
   let windSpeedElement = document.querySelector("#current-wind");
-  windSpeedElement.innerHTML = `Wind: ${Response.data.wind.speed}km/h`;
+  windSpeedElement.innerHTML = `Wind: <strong>${Response.data.wind.speed}km/h</strong>`;
 
   getForecast(Response.data.city);
 }
@@ -57,7 +57,7 @@ if (hours < 10) {
   hours = `0${hours}`;
 }
 
-curentDate.innerHTML = `<strong> ${formattedDay}</strong> ${hours}:${minutes}`;
+curentDate.innerHTML = ` ${formattedDay} ${hours}:${minutes}`;
 
 function getForecast(city) {
   let apiKey = `f7f785eadbt3ff93c746f724aob356d0`;
