@@ -80,8 +80,10 @@ function displayForecast(Response) {
 
   Response.data.daily.forEach(function (day, index) {
     if (index < 6) {
-      forecastHtml += `<div class="col ${day}">
-   <img src="$(day.condition.incon_url)" <br> 
+      forecastHtml += `<div class="col ${day}"> 
+      <div class="forecast-icon">
+   <img src="${day.condition.icon_url}"/> 
+   </div> 
    <div class="week-day"> ${formatDay(day.time)}</div> 
     <div class="temp-high"> ${Math.round(day.temperature.maximum)}</div> 
     <div class="temp-low"> ${Math.round(day.temperature.minimum)}</div>

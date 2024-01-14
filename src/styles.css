@@ -82,13 +82,17 @@ h4 {
 
 .current-weather-info {
   margin-left: 15px;
-  font-size: 14px;
 }
 
 .week-day {
   padding-top: 25px;
   padding-bottom: 25px;
   font-weight: 600;
+}
+
+.forecast-icon {
+  width: 5px;
+  margin-left: -25px;
 }
 
 .temp-high {
