@@ -20,6 +20,8 @@ function displayTemp(Response) {
 
   let windSpeedElement = document.querySelector("#current-wind");
   windSpeedElement.innerHTML = `Wind: ${Response.data.wind.speed}km/h`;
+
+  getForecast(Response.data.city);
 }
 function handleSubmit(event) {
   event.preventDefault();
@@ -57,7 +59,14 @@ if (hours < 10) {
 
 curentDate.innerHTML = `<strong> ${formattedDay}</strong> ${hours}:${minutes}`;
 
+function getForecast(city) {
+  let apiKey = `f7f785eadbt3ff93c746f724aob356d0`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
 function displayForecast() {
+  displayForecast(Response);
   let forecastHtml = "<div class='row'>";
   let days = ["MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
