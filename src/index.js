@@ -18,6 +18,9 @@ function displayTemp(Response) {
   let humidityNumber = Response.data.temperature.humidity;
   humidityElement.innerHTML = `Humidity: <strong>${humidityNumber}%</strong>`;
 
+  let conditionElement = document.querySelector("#current-condition");
+  conditionElement.innerHTML = `<strong>${Response.data.condition.description}</strong>`;
+
   let windSpeedElement = document.querySelector("#current-wind");
   windSpeedElement.innerHTML = `Wind: <strong>${Response.data.wind.speed}km/h</strong>`;
 
