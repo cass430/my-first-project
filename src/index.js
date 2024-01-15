@@ -23,16 +23,20 @@ function displayTemp(Response) {
 
   getForecast(Response.data.city);
 }
+function searchCity(city) {
+  let apiKey = "f7f785eadbt3ff93c746f724aob356d0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayTemp);
+}
+
 function handleSubmit(event) {
   event.preventDefault();
 
   let searchInputElement = document.querySelector("#search-input");
 
-  let city = searchInputElement.value;
-  let apiKey = "f7f785eadbt3ff93c746f724aob356d0";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayTemp);
+  let searchInput = document.querySelector("#search-input");
+  searchCity(searchInput.value);
 }
 let searchForm = document.querySelector("#search-form");
 
@@ -95,3 +99,5 @@ function displayForecast(Response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
+
+searchCity("Paris");
