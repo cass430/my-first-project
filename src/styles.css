@@ -78,6 +78,7 @@ h4 {
   justify-content: space-between;
   text-align: center;
   width: 70%;
+  margin-top: -16px;
 }
 
 .current-weather-info {
@@ -90,20 +91,19 @@ h4 {
   font-weight: 600;
 }
 
-.forecast-icon {
-  width: 5px;
-  margin-left: -25px;
+.forecast-icon img {
+  width: 38px;
 }
 
 .temp-high {
   color: #f0f0f0;
-  opacity: 0.8;
+  opacity: 0.9;
   padding-bottom: 15px;
 }
 
 .temp-low {
   color: #f0f0f0;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .windy {
@@ -114,6 +114,7 @@ footer {
   font-size: 14px;
   color: #f0f0f0;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 20px;
   padding-bottom: 20px;
+  opacity: 70%;
 }
